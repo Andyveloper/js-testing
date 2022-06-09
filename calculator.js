@@ -23,9 +23,4 @@ class Calculator {
 
 const calculator = new Calculator()
 
-calculator.add(1, 1)
-
-console.log(calculator.add(1, 9));
-console.log(calculator.subtract(11, 1));
-console.log(calculator.divide(100.5, 10));
-console.log(calculator.multiply(10, 1));
+module.exports = calculator
