@@ -1,6 +1,7 @@
 const stringLength = require('./string')
 const reverseString = require('./reverse')
-const calculator = require('./calculator')
+const calculator = require('./calculator');
+const capitalize = require('./capitalize');
 
 stringLength('hello'); // 5
 
@@ -52,5 +53,13 @@ describe("Fully functional calculator for arithmetic", () => {
     expect(calculator.multiply(1, 1)).toBe(1),
     expect(calculator.multiply(10, 10)).toBe(100),
     expect(calculator.multiply(535, 205)).toBe(109675)
+  })
+})
+
+describe("Capitalize first chatacter of a string", () => {
+  it("Should show first letter capitalized", () => {
+    expect(capitalize('hello')).toBe('Hello')
+    expect(capitalize('i don\'t want to')).toBe('I don\'t want to')
+    expect(capitalize('фра́нция')).toBe('Фра́нция')
   })
 })
